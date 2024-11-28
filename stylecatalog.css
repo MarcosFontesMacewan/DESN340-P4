@@ -1,0 +1,227 @@
+body {
+  background-color: #FF2C2C;
+}
+
+/*<!--NAVIGATION-->*/
+.Nav-Container{
+  display: flex;
+  justify-content: space-between; 
+  height: 7.5vh;
+  width: 100%;
+  background-color: white;
+  border-bottom: solid;
+  border-color: black;
+  
+}
+
+.Logo{
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 11.6vw;
+  height: 7.5vh;
+  
+}
+
+.Navbar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Nav-Buttons{
+  list-style: none;
+  display: flex;
+  gap: 4vw;
+}
+
+.Nav-Buttons li{
+  color: #000;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-style: italic;
+}
+
+.Nav-Buttons a{
+  text-decoration: none;
+  color: black;
+}
+
+.Nav-Buttons .Current a{
+  color: red;
+  text-shadow: 
+  2px 2px 0px black, 
+  -2px -2px 0px black, 
+  2px -2px 0px black, 
+  -2px 2px 0px black, 
+  0px 2px 0px black, 
+  0px -2px 0px black, 
+  2px 0px 0px black, 
+  -2px 0px 0px black; 
+}
+
+.Filler{
+  display: inline-block;
+  width: 11.6vw;
+  height: 7.5vh;
+}
+
+/*<!--HERO-->*/
+.Hero-Container{
+  height: 45.83vh;
+  width: 83.12vw;
+  background-color: #7CD474;
+  border-left: solid;
+  border-right: solid;
+  border-color: black;
+  border-top: transparent;
+  border-bottom: transparent;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.Comic-Texture{
+  height: 45.83vh;
+  width: 83.12vw;
+}
+
+
+/*<!--MAIN BODY-->*/
+.Main-Container{
+  height: 319.81vh;
+  width: 83.12vw;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*<!--FOOTER-->*/
+.Footer-Container{
+  position: relative;
+  width: 83.12vw;
+  height: 51.3vh;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: solid black;
+  border-right: solid black;
+}
+
+.Comic-Rip{
+  z-index: 0;
+  position: absolute;
+  top: 10vh;
+  left: 3.75vw;
+  width: 26.35vw;
+  height: 31.38vh;
+}
+
+.Logo-Over img{
+  position: absolute;
+  z-index: 1;
+  top: 21vh;
+  left: 9vw;
+  width: 15.83vw;
+  height: 9.907vh;
+}
+
+.Contact{
+  position: absolute;
+  top: 11.77vh;
+  left: 33.65vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.PhoneFoot{
+  position: absolute;
+  top: 19.27vh;
+  left: 37.18vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.InstaFoot{
+  position: absolute;
+  top: 26.31vh;
+  left: 37.18vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.FacebookFoot{
+  position: absolute;
+  top: 33.91vh;
+  left: 37.18vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Location{
+  position: absolute;
+  top: 11.77vh;
+  left: 58.9vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Address{
+  position: absolute;
+  max-width: 12.65vw;
+  top: 19.27vh;
+  left: 58.9vw;
+  color: #FFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.PhoneImg{
+  position: absolute;
+  top: 20.5vh;
+  left: 33.65vw;
+}
+
+.InstaImg{
+  position: absolute;
+  top: 27.4vh;
+  left: 33.65vw;
+}
+
+.FacebookImg{
+  position: absolute;
+  top: 34.91vh;
+  left: 33.65vw;
+}
+
+
