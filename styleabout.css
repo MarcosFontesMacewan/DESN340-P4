@@ -15,12 +15,16 @@ body {
 }
 
 .Logo{
+  max-width: 100%;
   display: inline-block;
   margin-left: 5px;
   margin-top: 5px;
-  width: 11.6vw;
-  height: 7.5vh;
-  
+  width: auto;
+  height: auto;
+}
+
+.Hamburger{
+  display: none;
 }
 
 .Navbar{
@@ -35,12 +39,13 @@ body {
   list-style: none;
   display: flex;
   gap: 4vw;
+  
 }
 
 .Nav-Buttons li{
   color: #000;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -50,6 +55,21 @@ body {
 .Nav-Buttons a{
   text-decoration: none;
   color: black;
+  transition-duration: 0.1s;
+}
+
+.Nav-Buttons a:hover{
+  color: red;
+  text-shadow: 
+  2px 2px 0px black, 
+  -2px -2px 0px black, 
+  2px -2px 0px black, 
+  -2px 2px 0px black, 
+  0px 2px 0px black, 
+  0px -2px 0px black, 
+  2px 0px 0px black, 
+  -2px 0px 0px black; 
+  
 }
 
 .Nav-Buttons .Current a{
@@ -65,38 +85,109 @@ body {
   -2px 0px 0px black; 
 }
 
-.Filler{
+.FillerImg{
+  opacity: 0%;
+  max-width: 11.6vw;
   display: inline-block;
-  width: 11.6vw;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: auto;
   height: 7.5vh;
 }
 
 /*<!--HERO-->*/
 .Hero-Container{
-  height: 45.83vh;
   width: 83.12vw;
-  background-color: #111676;
+  height: 51.3vh;
+  margin: 0 auto;
   border-left: solid;
   border-right: solid;
-  border-color: black;
-  border-top: transparent;
-  border-bottom: transparent;
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: solid;
+  background: #111676 url("Images/All Pages/comictexture.png") no-repeat center center;
+  background-size: cover;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  overflow: hidden;  
 
 }
 
-.Comic-Texture{
-  height: 45.83vh;
-  width: 83.12vw;
+.MilesnGwen{
+  object-fit: contain;
+  max-height: 100%;  
+  height: 100%;
+  width: auto;
+  float: left;
 }
 
+.AboutUs1{
+  left: 65%;
+  position: absolute;
+  color: white;
+  text-shadow: 
+  4px 4px 0px black, 
+  -4px -4px 0px black, 
+  4px -4px 0px black, 
+  -4px 4px 0px black, 
+  0px 4px 0px black, 
+  0px -4px 0px black, 
+  4px 0px 0px black, 
+  -4px 0px 0px black; ;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5vw;
+  font-style: italic;
+  transition-duration: 0.4s;
+}
+
+.AboutUs1:hover{
+  color: #e076c0;
+}
 
 /*<!--STORY BOXES-->*/
+
+.speech-bubble-1 {
+  display: flex;
+  justify-content: center;
+  position: relative;             
+  background-image: url("Images/About us/Rightbubble.png");
+  background-size: cover;        
+  background-position: center;    
+  padding: 30px;                 
+  width: 27vw;                   
+  height: 29vh;                 
+  color: #333;                    
+  text-align: center;   
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;        
+}
+
+.speech-bubble-2{
+  display: flex;
+  justify-content: center;
+  position: relative;             
+  background-image: url("Images/About us/Leftbubble.png");
+  background-size: cover;        
+  background-position: center;    
+  padding: 30px;                 
+  width: 500px;                   
+  height: 270px;                 
+  color: #333;                    
+  text-align: center;   
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+
+.bubble-text {  
+  margin-top: 10px;                
+  line-height: 1.5;               
+  font-size: 18px;             
+  width: 300px;
+  top: 0px;
+  bottom: 30px;
+}
+
 .Hero-Container2{
   height: 45.83vh;
   width: 83.12vw;
-  background-color: #3243FE;
+  background: #3243FE url("Images/All Pages/comictexture.png") no-repeat center center;
   border-left: solid;
   border-right: solid;
   border-top: solid;
@@ -104,12 +195,54 @@ body {
   border-bottom: transparent;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.Narration{
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 1%;
+  background-color: #FFF;
+  width: 19.23vw;
+  height: 5.3vh;
+  border: solid black;
+}
+
+.Narration p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 1%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Batman2{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  float: right;
+  width: auto;
+  height: auto;
+  max-height: 90%;
+  }
+
+.first{
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 25px;
+}
+
+.first p{
+  margin-top: 5%;
+  font-weight: 600;
 }
 
 .Hero-Container3{
   height: 45.83vh;
   width: 83.12vw;
-  background-color: #FF3C3C;
+  background: #FF3C3C url("Images/All Pages/comictexture.png") no-repeat center center;;
   border-left: solid;
   border-right: solid;
   border-top: solid;
@@ -117,12 +250,40 @@ body {
   border-bottom: transparent;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.Superman1{
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+  object-fit: contain;
+  float: left;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+}
+
+.second{
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 25px;
+  width: 20.25vw;
+  height: 21.75vh;
+}
+
+.second p{
+  margin-top: 10%;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .Hero-Container4{
   height: 45.83vh;
   width: 83.12vw;
-  background-color: #61DA69;
+  background: #61DA69 url("Images/All Pages/comictexture.png") no-repeat center center;;
   border-left: solid;
   border-right: solid;
   border-top: solid;
@@ -130,12 +291,64 @@ body {
   border-bottom: transparent;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.Storm1{ 
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+  object-fit: contain;
+  float: left;
+  width: auto;
+  height: auto;
+  max-height: 65%;
+  }
+
+.Spiderman1{
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-height: 80%;
+  }
+
+.third{
+  left: 40%;
+  top: 20px;
+  transform: translate(-50%, 0);
+  width: 20.25vw;
+  height: 21.75vh;
+}
+
+.third p{
+  margin-top: 10%;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.fourth {
+  left: 62%;
+  transform: translate(-50%, -45%);
+  width: 17.25vw;
+  height: 18.75vh;
+}
+
+.fourth p{
+  margin-top: 8%;
+  width: 65%;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .Hero-Container5{
   height: 45.83vh;
   width: 83.12vw;
-  background-color: #E8ED62;
+  background: #E8ED62 url("Images/All Pages/comictexture.png") no-repeat center center;
   border-left: solid;
   border-right: solid;
   border-top: solid;
@@ -143,8 +356,27 @@ body {
   border-bottom: transparent;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
 }
 
+.Deadpool1{
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  }
+
+.ComicLove{
+  justify-content: center;
+  position: absolute;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 90px;
+  color: #61DA69;
+}
 
 /*<!--FOOTER-->*/
 .Footer-Container{
@@ -156,24 +388,33 @@ body {
   margin-right: auto;
   border-left: solid black;
   border-right: solid black;
+  display: flex;                          
+  align-items: center;  
 }
 
-.Comic-Rip{
-  z-index: 0;
-  position: absolute;
-  top: 10vh;
-  left: 3.75vw;
-  width: 26.35vw;
-  height: 31.38vh;
+.ContactBar {
+  display: none;
 }
 
-.Logo-Over img{
-  position: absolute;
-  z-index: 1;
-  top: 21vh;
-  left: 9vw;
-  width: 15.83vw;
-  height: 9.907vh;
+.Comic-Rip {
+  position: relative;                 
+  background-image: url('Images/All Pages/Footerpagerip.png');
+  background-size: cover;                
+  background-position: center;            
+  width: 26vw;                           
+  height: 34vh;                       
+  display: flex;                         
+  justify-content: center;               
+  align-items: center;                    
+}
+
+.Comic-Rip img{   
+  width: 80%;                    
+  height: auto;                          
+}
+
+.SpiderIcon{
+  display: none;
 }
 
 .Contact{
@@ -182,7 +423,7 @@ body {
   left: 33.65vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -194,7 +435,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -206,7 +447,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -218,7 +459,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -230,7 +471,7 @@ body {
   left: 58.9vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -243,28 +484,162 @@ body {
   left: 58.9vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .PhoneImg{
+  max-height: 100%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 20.5vh;
   left: 33.65vw;
 }
 
 .InstaImg{
+  max-height: 100%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 27.4vh;
   left: 33.65vw;
 }
 
 .FacebookImg{
+  max-height: 80%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 34.91vh;
   left: 33.65vw;
 }
 
 
+@media screen and (max-width: 600px) {
+
+  .Hero-Container, .Signup-Container, .Footer-Container{
+    width: 100%;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .Exp-Container{
+    display: none;
+  }
+
+
+  .Nav-Container{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .Navbar {
+    display: none;
+  }
+
+  .Logo{
+    display: block;
+    width: 60%;
+    margin-bottom: 15px;
+  }
+
+  .Hamburger{
+    display: block;
+    width: 10%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .FillerImg{
+    display: none;
+  }
+
+  .Nav-Buttons{
+    display: none;
+  }
+
+  /*<!--HERO---------------------------------------------------------------------------->*/
+
+.Hero-Container, .Hero-Container2, .Hero-Container3, .Hero-Container4, .Hero-Container5{
+  width: 100%;
+  height: 20vh;
+}
+
+
+
+  /*<!--FOOTER---------------------------------------------------------------------------->*/
+.Contact{
+  display: none;
+}
+
+.PhoneFoot{
+  display: none;
+}
+
+.FacebookFoot{
+  display: none;
+}
+
+.InstaFoot{
+  display: none;
+}
+
+.Comic-Rip{
+  display: none;
+}
+
+.ContactBar{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1aee;
+  height: 70px;
+}
+
+.Location{
+  top: 15vh;
+  font-size: 4vw;
+}
+
+.Address{
+  top: 25vh;
+  font-size: 3vw;
+  max-width: 25%;
+}
+
+.SpiderIcon{
+  display: block;
+  height: 40%;
+  width: auto;
+}
+
+.PhoneImg{
+  top: 10px;
+  left: 35%;
+  transform: translateX(-50%); 
+}
+
+.InstaImg{
+  height: 6;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.FacebookImg{
+  height: 5.5vh;
+  top: 12px;
+  left: 65%;
+  transform: translateX(-50%); 
+}
+}

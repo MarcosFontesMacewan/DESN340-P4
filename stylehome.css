@@ -14,13 +14,18 @@ body {
   
 }
 
+
 .Logo{
+  max-width: 100%;
   display: inline-block;
   margin-left: 5px;
   margin-top: 5px;
-  width: 11.6vw;
-  height: 7.5vh;
-  
+  width: auto;
+  height: auto;
+}
+
+.Hamburger{
+  display: none;
 }
 
 .Navbar{
@@ -32,15 +37,18 @@ body {
 }
 
 .Nav-Buttons{
+  height: auto;
+  width: auto;
   list-style: none;
   display: flex;
   gap: 4vw;
 }
 
+
 .Nav-Buttons li{
   color: #000;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -50,6 +58,20 @@ body {
 .Nav-Buttons a{
   text-decoration: none;
   color: black;
+  transition-duration: 0.1s;
+}
+
+.Nav-Buttons a:hover{
+  color: red;
+  text-shadow: 
+  2px 2px 0px black, 
+  -2px -2px 0px black, 
+  2px -2px 0px black, 
+  -2px 2px 0px black, 
+  0px 2px 0px black, 
+  0px -2px 0px black, 
+  2px 0px 0px black, 
+  -2px 0px 0px black; 
 }
 
 .Nav-Buttons .Current a{
@@ -65,36 +87,86 @@ body {
   -2px 0px 0px black; 
 }
 
-.Filler{
+.FillerImg{
+  opacity: 0%;
+  max-width: 11.6vw;
   display: inline-block;
-  width: 11.6vw;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: auto;
   height: 7.5vh;
 }
 
 /*<!--HERO---------------------------------------------------------------------------->*/
 .Hero-Container{
-  height: 45.83vh;
+  position: relative;
   width: 83.12vw;
-  background-color: #C00303;
+  height: 51.3vh;
+  margin: 0 auto;
   border-left: solid;
   border-right: solid;
-  border-color: black;
-  border-top: transparent;
-  border-bottom: transparent;
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: solid;
+  background: #C00303 url("Images/All Pages/comictexture.png") no-repeat center center;
+  background-size: cover;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  overflow: hidden; 
 
 }
 
-.Comic-Texture{
-  height: 45.83vh;
-  width: 83.12vw;
+.Spawn1{
+  object-fit: contain;
+  max-height: 100%;  ;
+  height: 100%;
+  width: auto;
+  float: left;
 }
 
+.Spawn2{
+  display: none;
+}
 
+.Carnage1{
+  display: none;
+}
+
+.GreenFire{
+  float: right;
+  max-height: 90%;  
+  height: 100%;
+  width: 50vw;
+  margin-top: 0%;
+  margin-right: 20.26vw;
+  
+}
+
+.HotText{
+  left: 42.29vw;
+  position: absolute;
+  color: white;
+  text-shadow: 
+  4px 4px 0px black, 
+  -4px -4px 0px black, 
+  4px -4px 0px black, 
+  -4px 4px 0px black, 
+  0px 4px 0px black, 
+  0px -4px 0px black, 
+  4px 0px 0px black, 
+  -4px 0px 0px black; ;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5vw;
+  font-style: italic;
+  transition-duration: 0.4s;
+}
+
+.HotText:hover{
+  color: #24ec09;
+}
 /*<!--MAIN BODY---------------------------------------------------------------------------->*/
 .Main-Container {
-  height: 319.81vh;
+  padding-top: 44px;
+  padding-bottom: 100px;
   width: 83.12vw;
   background-color: white;
   border-style: solid;
@@ -102,26 +174,243 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr); 
   column-gap: 1.04vw;
+  row-gap: 20px; 
+}
+
+.Arrivals {
+  grid-column: 2 / 10; 
+  margin-bottom: 44px;
+}
+
+/*<!--COMICS---------------------------------------------------------------------------->*/
+.StarWars {
+  grid-column: 2 / 4; 
+}
+
+.Buffy {
+  grid-column: 4 / 6; 
+}
+
+.Serenity {
+  grid-column: 6 / 8; 
+}
+
+.GIJoe {
+  grid-column: 8 / 10; 
+}
+
+.TMNT {
+  grid-column: 2 / 4; 
+}
+
+.Sonic {
+  grid-column: 4 / 6; 
+}
+
+.Walking-Dead {
+  grid-column: 6 / 8; 
+}
+
+.MLP {
+  grid-column: 8 / 10; 
+}
+
+.Comic {
+  display: block; 
+}
+
+.Comic img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+/*<!--MERCHANDISE---------------------------------------------------------------------------->*/
+
+.Merch {
+  display: block; 
+}
+
+.Merch img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+.MerchHead {
+  grid-column: 2 / 10; 
+  margin-bottom: 44px;
+}
+
+.SpawnToy {
+  grid-column: 2 / 4; 
+}
+
+.MikeyPop {
+  grid-column: 4 / 6; 
+}
+
+.Hulk-Statue {
+  grid-column: 6 / 8; 
+}
+
+.SteveToy {
+  grid-column: 8 / 10; 
+}
+
+.SpiderManToy {
+  grid-column: 2 / 4; 
+}
+
+.EaglyPop {
+  grid-column: 4 / 6; 
+}
+
+.Carnage-Shirt {
+  grid-column: 6 / 8; 
+}
+
+.GundamToy {
+  grid-column: 8 / 10; 
+}
+
+/*<!--CONTAINER CONSTANTS---------------------------------------------------------------->*/
+
+.Main-Container h2{
+  font-size: 1.8vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 625;
+}
+
+#Name {
+  font-size: 1.5vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0 5px 0; 
+  text-align: left; 
+}
+
+#Company {
+  color: #323232;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+  font-size: 1.3vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0; 
+  text-align: left; 
 }
 
 
-.StarWars{
-  grid-column: 3/4;
+/*<!--SIGNUP---------------------------------------------------------------------------->*/
+
+.Signup-Container {
+  max-width: 100%;
+  max-height: 100%;
+  width: 83.12vw;
+  height: 51.3vh;
+  margin: 0 auto;
+  border-left: solid;
+  border-right: solid;
+  border-bottom: solid;
+  background: #df0505 url("Images/All Pages/comictexture.png") no-repeat center center;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
 }
 
-.Buffy{
-  grid-column: 4/5;
+.Subscription p{
+  color: #FFF;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 
+  2px 2px 0px black, 
+  -2px -2px 0px black, 
+  2px -2px 0px black, 
+  -2px 2px 0px black, 
+  0px 2px 0px black, 
+  0px -2px 0px black, 
+  2px 0px 0px black, 
+  -2px 0px 0px black; 
 }
 
-.Serenity{
-  grid-column: 8/9;
+.Sub1{
+  font-size: 6vw;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -100%);
+  text-align: center;
 }
 
-.GIJoe{
-  grid-column: 9/10;
+.Sub2{
+  font-size: 3.8vw;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -100%);
+  text-align: center;
 }
+
+.Batman1 {
+  float: right;
+  width: auto;
+  height: 100%;
+  max-height: 100%;
+}
+
+.Wolverine1 {
+  float: left;
+  width: auto;
+  height: 100%;
+  max-height: 100%;
+}
+
+.CapA1 {
+  display: none;
+}
+
+
+.Signup-Button{
+  max-height: 100%;
+  max-width: 100%;
+  color: white;
+  position: absolute;
+  background-color: #03a5e6;
+  top: 27.8vh;
+  left: 29.53vw;
+  width: 24.11vw;
+  height: 10.18vh;
+  font-size: 1.4vw;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  border: solid black;
+ /* text-shadow: 
+  1px 1px 0px black, 
+  -1px -1px 0px black, 
+  1px -1px 0px black, 
+  -1px 1px 0px black, 
+  0px 1px 0px black, 
+  0px -1px 0px black, 
+  1px 0px 0px black, 
+  -1px 0px 0px black; */
+  transition-duration: 0.4s;
+}
+
+.Signup-Button:hover{
+  color: black;
+  background-color: #FFF;
+  text-shadow: none;
+}
+
+
+
+
+
 
 /*<!--EXPERIENCE---------------------------------------------------------------------------->*/
 .Exp-Container{
@@ -142,11 +431,11 @@ body {
 
 .Unforgettable{
   white-space: nowrap;
-  overflow: hidden;
+  width: auto;
   position: absolute;
   color: #FFF;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 64px;
+  font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -175,24 +464,33 @@ body {
   margin-right: auto;
   border-left: solid black;
   border-right: solid black;
+  display: flex;                          
+  align-items: center;  
 }
 
-.Comic-Rip{
-  z-index: 0;
-  position: absolute;
-  top: 10vh;
-  left: 3.75vw;
-  width: 26.35vw;
-  height: 31.38vh;
+.ContactBar {
+  display: none;
 }
 
-.Logo-Over img{
-  position: absolute;
-  z-index: 1;
-  top: 21vh;
-  left: 9vw;
-  width: 15.83vw;
-  height: 9.907vh;
+.Comic-Rip {
+  position: relative;                 
+  background-image: url('Images/All Pages/Footerpagerip.png');
+  background-size: cover;                
+  background-position: center;            
+  width: 26vw;                           
+  height: 34vh;                       
+  display: flex;                         
+  justify-content: center;               
+  align-items: center;                    
+}
+
+.Comic-Rip img{   
+  width: 80%;                    
+  height: auto;                          
+}
+
+.SpiderIcon{
+  display: none;
 }
 
 .Contact{
@@ -201,7 +499,7 @@ body {
   left: 33.65vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -213,7 +511,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -225,7 +523,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -237,7 +535,7 @@ body {
   left: 37.18vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -249,7 +547,7 @@ body {
   left: 58.9vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
+  font-size: 1.7vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -262,28 +560,416 @@ body {
   left: 58.9vw;
   color: #FFF;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .PhoneImg{
+  max-height: 100%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 20.5vh;
   left: 33.65vw;
 }
 
 .InstaImg{
+  max-height: 100%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 27.4vh;
   left: 33.65vw;
 }
 
 .FacebookImg{
+  max-height: 80%;
+  height: auto;
+  width: auto;
   position: absolute;
   top: 34.91vh;
   left: 33.65vw;
 }
 
 
+@media screen and (max-width: 600px) {
+
+  .Hero-Container, .Signup-Container, .Footer-Container{
+    width: 100%;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .Exp-Container{
+    display: none;
+  }
+
+
+  .Nav-Container{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .Navbar {
+    display: none;
+  }
+
+  .Logo{
+    display: block;
+    width: 60%;
+    margin-bottom: 15px;
+  }
+
+  .Hamburger{
+    display: block;
+    width: 10%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .FillerImg{
+    display: none;
+  }
+
+  .Nav-Buttons{
+    display: none;
+  }
+
+  /*<!--HERO---------------------------------------------------------------------------->*/
+.Hero-Container{
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  height: 20vh;
+  border-left: none;
+  border-right: none;
+
+}
+
+.Spawn1{
+  display: none;
+}
+
+.Spawn2{
+  display: block;
+  object-fit: contain;
+  max-height: 100%;  
+  height: auto;
+  width: auto;
+  float: right;
+}
+
+.Carnage1{
+  display: block;
+  object-fit: contain;
+  max-height: 100%;  ;
+  height: 100%;
+  width: auto;
+  float: left;
+}
+
+.GreenFire{
+  display: none;
+  
+}
+
+.HotText{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+  text-shadow: 
+  3px 3px 0px black, 
+  -3px -3px 0px black, 
+  3px -3px 0px black, 
+  -3px 3px 0px black, 
+  0px 3px 0px black, 
+  0px -3px 0px black, 
+  3px 0px 0px black, 
+  -3px 0px 0px black; ;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5vw;
+  font-style: italic;
+}
+
+
+  /*<MAIN CONTAINER-------------------------------------------------------------------->*/
+
+  .Main-Container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  border: none;
+  column-gap: 2.04vw;
+  row-gap: 20px;   
+  }
+
+  .Main-Container h2{
+    font-size: 2.8vw;
+  }
+  
+  #Name {
+    font-size: 2.5vw;
+  }
+  
+  #Company {
+    font-size: 2.3vw;
+  }
+  .Arrivals {
+    grid-column: 2 / 5; 
+    margin-bottom: 44px;
+  }
+  
+  /*<!--COMICS---------------------------------------------------------------------------->*/
+  .StarWars {
+    grid-column: 2 / 4; 
+  }
+  
+  .Buffy {
+    grid-column: 4 / 6; 
+  }
+  
+  .Serenity {
+    grid-column: 2 / 4; 
+  }
+  
+  .GIJoe {
+    grid-column: 4 / 6; 
+  }
+  
+  .TMNT {
+    grid-column: 2 / 4; 
+  }
+  
+  .Sonic {
+    grid-column: 4 / 6; 
+  }
+  
+  .Walking-Dead {
+    grid-column: 2 / 4; 
+  }
+  
+  .MLP {
+    grid-column: 4 / 6; 
+  }
+  
+  .Comic {
+    display: block; 
+  }
+  
+  .Comic img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+
+  /*<!--MERCH---------------------------------------------------------------------------->*/
+
+  .Merch {
+    display: block; 
+  }
+  
+  .Merch img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+  
+  .MerchHead {
+    grid-column: 2 / 5; 
+    margin-bottom: 44px;
+  }
+  
+  .SpawnToy {
+    grid-column: 2 / 4; 
+  }
+  
+  .MikeyPop {
+    grid-column: 4 / 6; 
+  }
+  
+  .Hulk-Statue {
+    grid-column: 2 / 4; 
+  }
+  
+  .SteveToy {
+    grid-column: 4 / 6; 
+  }
+  
+  .SpiderManToy {
+    grid-column: 2 / 4; 
+  }
+  
+  .EaglyPop {
+    grid-column: 4 / 6; 
+  }
+  
+  .Carnage-Shirt {
+    grid-column: 2 / 4; 
+  }
+  
+  .GundamToy {
+    grid-column: 4 / 6; 
+  }
+
+  .Nav-Container {
+    width: 100%; /* Stretch all containers to the edge of the screen */
+    margin: 0; /* Remove any automatic margin */
+  }
+
+  /*<!--SIGNUP---------------------------------------------------------------------------->*/
+
+.Signup-Container {
+  max-width: 100%;
+  max-height: 100%;
+  height: 25vh;
+  margin: 0 auto;
+  background: #df0505 url("Images/All Pages/comictexture.png") no-repeat center center;
+  background-size: cover; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.Subscription p{
+  color: #FFF;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 
+  2px 2px 0px black, 
+  -2px -2px 0px black, 
+  2px -2px 0px black, 
+  -2px 2px 0px black, 
+  0px 2px 0px black, 
+  0px -2px 0px black, 
+  2px 0px 0px black, 
+  -2px 0px 0px black; 
+}
+
+.Sub1{
+  font-size: 8vw;
+  position: absolute;
+  left: 75%;
+  top: 10%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+
+.Sub2{
+  font-size: 4.8vw;
+  position: absolute;
+  left: 75%;
+  top: 55%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+
+.Batman1 {
+  display: none;
+}
+
+.Wolverine1 {
+  display: none;
+}
+
+.CapA1 {
+  display: block;
+  float: left;
+  width: auto;
+  height: auto;
+  width: auto;
+  max-height: 100%;
+}
+
+
+.Signup-Button{
+  max-height: 100%;
+  max-width: 100%;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  background-color: #ffffff;
+  top: 17.8vh;
+  left: 58%;
+  width: 34.11vw;
+  height: 6.18vh;
+  font-size: 1.8vw;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  border: solid black;
+}
+
+/*<!--FOOTER---------------------------------------------------------------------------->*/
+.Contact{
+  display: none;
+}
+
+.PhoneFoot{
+  display: none;
+}
+
+.FacebookFoot{
+  display: none;
+}
+
+.InstaFoot{
+  display: none;
+}
+
+.Comic-Rip{
+  display: none;
+}
+
+.ContactBar{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1aee;
+  height: 70px;
+}
+
+.Location{
+  top: 15vh;
+  font-size: 4vw;
+}
+
+.Address{
+  top: 25vh;
+  font-size: 3vw;
+  max-width: 25%;
+}
+
+.SpiderIcon{
+  display: block;
+  height: 40%;
+  width: auto;
+}
+
+.PhoneImg{
+  top: 10px;
+  left: 35%;
+  transform: translateX(-50%); 
+}
+
+.InstaImg{
+  height: 6;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.FacebookImg{
+  height: 5.5vh;
+  top: 12px;
+  left: 65%;
+  transform: translateX(-50%); 
+}
+}
