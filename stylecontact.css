@@ -119,6 +119,14 @@ body {
   width: auto;
   }
 
+.Boba1{
+  display: none;
+}
+
+.Predator1{
+  display: none;
+}
+
 .ContactUs1{
     left: 10%;
     position: relative;
@@ -170,7 +178,6 @@ body {
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(10, 1fr); 
-  grid-template-rows: repeat(6, 1fr);
   column-gap: 1.04vw;
   row-gap: 20px; 
 }
@@ -179,7 +186,37 @@ body {
   grid-column: 2/4;
 }
 
+.PhoneNum{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.PhoneNum img{
+  width:  2.5vw;
+  height: auto;
+  margin-right: 5%;
+}
+
+.StoreHours p{
+  width: 20vw;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 450;
+  line-height: normal;
+  margin: 5px 5px 5px 0; 
+}
+
 #Call{
+  font-size: 1.5vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+#Hours{
   font-size: 1.5vw;
   font-style: normal;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -197,8 +234,8 @@ body {
   margin: 10px 5px 5px 0; 
 }
 
-.WestSide{
-  grid-column: 8/10;
+.WestPromo{
+  grid-column: 7/10;
   font-size: 1.5vw;
   font-style: normal;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -206,6 +243,18 @@ body {
   line-height: normal;
   margin: 10px 0 5px 0; 
   text-align: center;
+}
+
+.Icons{
+  display: flex;
+  grid-column: 8/10;
+  align-items: center;
+  justify-content: center;
+}
+
+.Icons img{
+  width: 2.5vw;
+  margin-right: 10px;
 }
 
 
@@ -417,6 +466,23 @@ body {
   display: none;
 }
 
+.Boba1{
+  display: block;
+  object-fit: contain;
+  max-height: 100%;  
+  height: 100%;
+  width: auto;
+  float: left;
+}
+
+.Predator1{
+  display: block;
+  object-fit: contain;
+  max-height: 100%;  
+  height: 100%;
+  width: auto;
+  float: right;
+}
 .ContactUs1{
   position: absolute;
   left: 50%;
@@ -438,11 +504,88 @@ body {
 }
 
 
-
+/*<!--MAIN CONTAINER----->*/
 .Main-Container {
   width: 100%;
   display: grid;
   border: none;
+  grid-template-columns: repeat(6, 1fr); 
+  column-gap: 1.04vw;
+  row-gap: 20px; 
+}
+
+.CallUs{
+  grid-column: 2/3;
+}
+
+.PhoneNum{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.PhoneNum img{
+  width:  5vw;
+  height: auto;
+  margin-right: 5%;
+}
+
+.StoreHours p{
+  width: 35vw;
+  font-size: 2.2vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 450;
+  line-height: normal;
+  margin: 5px 5px 5px 0; 
+}
+
+#Call{
+  font-size: 2.5vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+#Hours{
+  font-size: 2.5vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+#Number{
+  font-size: 2.3vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 300;
+  line-height: normal;
+  margin: 10px 5px 5px 0; 
+}
+
+.WestPromo{
+  grid-column: 4/6;
+  font-size: 2.5vw;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  margin: 10px 0 5px 0; 
+  text-align: center;
+}
+
+.Icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Icons img{
+  width: 3.5vw;
+  margin-right: 10px;
 }
 
 /*<!--FOOTER---------------------------------------------------------------------------->*/
