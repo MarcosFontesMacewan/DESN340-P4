@@ -153,8 +153,8 @@ body {
   0px 4px 0px black, 
   0px -4px 0px black, 
   4px 0px 0px black, 
-  -4px 0px 0px black; ;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  -4px 0px 0px black; 
+  font-family: Impact, Haetenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 5vw;
   font-style: italic;
   transition-duration: 0.4s;
@@ -695,7 +695,7 @@ body {
   0px 3px 0px black, 
   0px -3px 0px black, 
   3px 0px 0px black, 
-  -3px 0px 0px black; ;
+  -3px 0px 0px black; 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 5vw;
   font-style: italic;
